@@ -9,7 +9,7 @@
 
     --Brown-800: hsl(14, 45%, 36%);
 
-    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-800: hsla(332, 51%, 32%, 0.1);
     --Rose-50: hsl(330, 100%, 98%);
 
     /* Font Families */
@@ -35,10 +35,113 @@ body {
 }
 
 #main-content-container {
-    width: 100px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 700px;
     font-family: var(--outfit);
-    color: var(--Stone-900);
+    color: var(--Stone-600);
     background-color: var(--White);
+    padding: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 1.5rem;
+    font-size: 1.15rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    font-family: var(--young-serif);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+h1 {
+    color: var(--Stone-900);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+ul, ol, p {
+    margin-bottom: 1.5rem;
+}
+
+.preparation-container {
+    background-color: var(--Rose-800);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    color: hsla(332, 51%, 32%, 1);
+    margin-bottom: 1rem;
+}
+
+.preparation-list, .ingredients-list, ol {
+  padding-left: 2rem;
+}
+
+.ingredients-list li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+h2 {
+    color:hsl(14, 45%, 36%);
+    font-weight: 500;
+}
+
+.instructions-list li::marker {
+    color: hsl(14, 45%, 36%);
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.nutrition-list li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.nutrition strong {
+    color:hsl(14, 45%, 36%);
+}
+
+@media (max-width: 400px) {
+    body {
+        background-color: white;
+    }
+
+    .nutrition-list li {
+        width: 60%;
+    }
+
+    img {
+        border-radius: 0;
+        width: 340px;
+    }
+
+    #main-content-container {
+    max-width: 700px;
+    font-family: var(--outfit);
+    color: var(--Stone-600);
+    background-color: var(--White);
+    padding: 2rem;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 5rem;
+    border-radius: 1.5rem;
+    font-size: 1.15rem;
+}
 }
